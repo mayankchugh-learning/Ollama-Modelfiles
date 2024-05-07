@@ -58,3 +58,10 @@ ollama run EminemMistral
 ollama rm MasterYodaMistral
 ollama rm EminemMistral
 ```
+
+![alt text](image.png)
+
+```bash
+https://github.com/ollama/ollama/tree/main/examples/modelfile-mario
+https://github.com/ollama/ollama/blob/main/docs/modelfile.md
+```
