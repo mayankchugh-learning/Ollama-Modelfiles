@@ -29,10 +29,11 @@ ollama show mistral --modelfile
 ```bash
 ollama create <NewModelfilename> -f ./Modelfile
 ```
+```bash
 ollama create BorisJohnsonModel -f ./mistralTweakModelfile
 ollama create MasterYodaModel -f ./MasterYodaModelfile
 ollama create EminemModel -f ./EminemModelfile
-
+```
 ```bash
 ollama list
 ```
@@ -82,7 +83,7 @@ First, download and install Ollama from the following GitHub repository:
 ## Step 2: Create and activate Conda envirnoment
 
 ```bash
-conda create -p ollamaHuggingFaceEnv python=3. -y
+conda create -p ollamaHuggingFaceEnv python=3 -y
 ```
 
 ## Step 3: Activate Conda envirnoment
