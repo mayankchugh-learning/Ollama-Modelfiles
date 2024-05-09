@@ -1,5 +1,8 @@
 # Ollama-Modelfiles
 
+```bash
+git clone https://github.com/mayankchugh-learning/Ollama-Modelfiles.git
+```
 
 ```bash
 ollama list
@@ -26,6 +29,9 @@ ollama show mistral --modelfile
 ```bash
 ollama create <NewModelfilename> -f ./Modelfile
 ```
+ollama create BorisJohnsonModel -f ./mistralTweakModelfile
+ollama create MasterYodaModel -f ./MasterYodaModelfile
+ollama create EminemModel -f ./EminemModelfile
 
 ```bash
 ollama list
@@ -65,7 +71,7 @@ ollama rm EminemMistral
 https://github.com/ollama/ollama/tree/main/examples/modelfile-mario
 https://github.com/ollama/ollama/blob/main/docs/modelfile.md
 ```
-
+--------------------------------------------------------------------------------------
 # How to run HuggingFace Model on locally using Ollama 
 ## Step 1: Download and Install Ollama
 
@@ -79,7 +85,7 @@ First, download and install Ollama from the following GitHub repository:
 conda create -p ollamaHuggingFaceEnv python=3. -y
 ```
 
-## Step 3: Install Dependencies
+## Step 3: Activate Conda envirnoment
 
 ```bash
 source activate ./ollamaHuggingFaceEnv
