@@ -163,41 +163,25 @@ source activate ./ollamaHuggingFaceEnv
 
 
 - Click on Models 
-<div align="center">
-  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectModel.png" width="350" height="200"/>
-</div>
+![alt text](SelectModel.png)
 
 - Under Natural Language Processing - Click on Summarization 
-<div align="center">
-  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectSummarization1.png" width="350" height="200"/>
-</div>
-
-<div align="center">
-  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectSummarization2.png" width="350" height="200"/>
-</div>
+![alt text](SelectSummarization1.png)
+![alt text](SelectSummarization2.png)
 
 - Choose on Licenses -> Click on Apache 2.0 
-<div align="center">
-  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectLicensesAsApache2-0.png" width="350" height="200"/>
-</div>
+![alt text](SelectLicensesAsApache2-0.png)
 
 - Sort by Mostdownlods
-<div align="center">
-  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectSortByMostDownloads.png" width="350" height="200"/>
-</div>
+![alt text](SelectSortByMostDownloads.png)
 
 - Click on "sshleifer/distilbart-cnn-12-6"
-<div align="center">
-  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/Select-sshleifer-distilbart-cnn-12-6.png" width="350" height="200"/>
-</div>
+![alt text](Select-sshleifer-distilbart-cnn-12-6.png)
 
 - Click on button "Use this model" & click on Transformers the copy pipline code
-<div align="center">
-  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/Select-UseThisModelAndTransformers.png" width="350" height="200"/>
-</div>
+![alt text](Select-UseThisModelAndTransformers.png)
 
 ## Step 5: Download dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
