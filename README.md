@@ -74,11 +74,13 @@ https://github.com/ollama/ollama/blob/main/docs/modelfile.md
 ```
 --------------------------------------------------------------------------------------
 # How to run HuggingFace Model on locally using Ollama 
+
+# Methond 1 
 ## Step 1: Download and Install Ollama
 
 First, download and install Ollama from the following GitHub repository:
 
-[Ollama GitHub Repository](https://github.com/mayankchugh-learning/OllamaRAGApp.git)
+[GitHub Repository](https://github.com/mayankchugh-learning/Ollama-Modelfiles.git)
 
 ## Step 2: Create and activate Conda envirnoment
 
@@ -92,7 +94,7 @@ conda create -p ollamaHuggingFaceEnv python=3 -y
 source activate ./ollamaHuggingFaceEnv
 ```
 ## Step 4: Install HuggingFace CLI  in Conda envirnoment
-[https://huggingface.co/docs/huggingface_hub/main/en/guides/cli](https://github.com/mayankchugh-learning/OllamaRAGApp.git)
+[https://huggingface.co/docs/huggingface_hub/main/en/guides/cli](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli)
 
 ```bash
 pip install -U "huggingface_hub[cli]"
@@ -115,19 +117,83 @@ or
 HF_HUB_ENABLE_HF_TRANSFER=1
 ```
 
-## Step 6: Go to HuggingFace.co and click on mondels and then search "uncensored gguf wizard"
+## Step 7: Go to HuggingFace.co and click on mondels and then search "uncensored gguf wizard"
 
 ```bash
 huggingface-cli download TheBloke/WizardLM-7B-uncensored-GGUF WizardLM-7B-uncensored.Q4_K_M.gguf
 ```
 
-## Step 7: Copy the path where it download, Create Modelfile & save as below 
+## Step 8: Copy the path where it download, Create Modelfile & save as below 
 
 ```bash
 FROM /Users/mayankchugh/.cache/huggingface/hub/models--TheBloke--WizardLM-7B-uncensored-GGUF/snapshots/db690b5e11897e4bcbfb5193bb24fd531ab5cd2f/WizardLM-7B-uncensored.Q4_K_M.gguf
 ```
 
-## Step 8: Create model
+## Step 9: Create model
+```bash
+ollama create uncensored_wizard_7b -f ./hugginfaceModelfile
+```
+```bash
+ollama list
+```
+```bash
+ollama run uncensored_wizard_7b
+```
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# Methond 2
+## Step 1: Download and Install Ollama
+
+First, download and install Ollama from the following GitHub repository:
+
+[GitHub Repository](https://github.com/mayankchugh-learning/Ollama-Modelfiles.git)
+
+## Step 2: Create and activate Conda envirnoment
+
+```bash
+conda create -p ollamaHuggingFaceEnv python=3 -y
+```
+
+## Step 3: Activate Conda envirnoment
+
+```bash
+source activate ./ollamaHuggingFaceEnv
+```
+## Step 4: Choose huggingface model from HuggingFace
+
+
+[Select Model] (/Users/mayankchugh/gitRepos/mayankchugh.learning/Ollama-Modelfiles/SelectModel.png)
+
+## Step 5: Install HuggingFace Transfer in Conda envirnoment
+
+```bash
+pip install -U "huggingface_hub[hf_transfer]"
+```
+
+## Step 6: Install HuggingFace Transfer in Conda envirnoment
+
+```bash
+export HF_HUB_ENABLE_HF_TRANSFER=1
+```
+or 
+- create .env file and save
+```bash
+HF_HUB_ENABLE_HF_TRANSFER=1
+```
+
+## Step 7: Go to HuggingFace.co and click on mondels and then search "uncensored gguf wizard"
+
+```bash
+huggingface-cli download TheBloke/WizardLM-7B-uncensored-GGUF WizardLM-7B-uncensored.Q4_K_M.gguf
+```
+
+## Step 8: Copy the path where it download, Create Modelfile & save as below 
+
+```bash
+FROM /Users/mayankchugh/.cache/huggingface/hub/models--TheBloke--WizardLM-7B-uncensored-GGUF/snapshots/db690b5e11897e4bcbfb5193bb24fd531ab5cd2f/WizardLM-7B-uncensored.Q4_K_M.gguf
+```
+
+## Step 9: Create model
 ```bash
 ollama create uncensored_wizard_7b -f ./hugginfaceModelfile
 ```
