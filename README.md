@@ -178,7 +178,7 @@ source activate ./ollamaHuggingFaceEnv
 - Click on "sshleifer/distilbart-cnn-12-6"
 ![alt text](Select-sshleifer-distilbart-cnn-12-6.png)
 
-- Click on button "Use this model" & click on Transformers the copy pipline code
+- Click on button "Use this model" & click on Transformers the copy pipeline code
 ![alt text](Select-UseThisModelAndTransformers.png)
 
 ## Step 5: Download dependencies
