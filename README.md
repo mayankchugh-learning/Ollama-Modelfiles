@@ -162,46 +162,55 @@ source activate ./ollamaHuggingFaceEnv
 ## Step 4: Choose huggingface model from HuggingFace
 
 
-[Select Model] (/Users/mayankchugh/gitRepos/mayankchugh.learning/Ollama-Modelfiles/SelectModel.png)
+- Click on Models 
+<div align="center">
+  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectModel.png" width="350" height="200"/>
+</div>
 
-## Step 5: Install HuggingFace Transfer in Conda envirnoment
+- Under Natural Language Processing - Click on Summarization 
+<div align="center">
+  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectSummarization1.png" width="350" height="200"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectSummarization2.png" width="350" height="200"/>
+</div>
+
+- Choose on Licenses -> Click on Apache 2.0 
+<div align="center">
+  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectLicensesAsApache2-0.png" width="350" height="200"/>
+</div>
+
+- Sort by Mostdownlods
+<div align="center">
+  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/SelectSortByMostDownloads.png" width="350" height="200"/>
+</div>
+
+- Click on "sshleifer/distilbart-cnn-12-6"
+<div align="center">
+  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/Select-sshleifer-distilbart-cnn-12-6.png" width="350" height="200"/>
+</div>
+
+- Click on button "Use this model" & click on Transformers the copy pipline code
+<div align="center">
+  <img src="https://github.com/mayankchugh-learning/Ollama-Modelfiles/blob/main/Select-UseThisModelAndTransformers.png" width="350" height="200"/>
+</div>
+
+## Step 5: Download dependencies
 
 ```bash
-pip install -U "huggingface_hub[hf_transfer]"
+pip install -r requirements.txt
 ```
 
-## Step 6: Install HuggingFace Transfer in Conda envirnoment
-
-```bash
-export HF_HUB_ENABLE_HF_TRANSFER=1
-```
-or 
-- create .env file and save
-```bash
-HF_HUB_ENABLE_HF_TRANSFER=1
-```
-
-## Step 7: Go to HuggingFace.co and click on mondels and then search "uncensored gguf wizard"
+## Step 6: execute app.py
 
 ```bash
-huggingface-cli download TheBloke/WizardLM-7B-uncensored-GGUF WizardLM-7B-uncensored.Q4_K_M.gguf
+python app.py
 ```
 
-## Step 8: Copy the path where it download, Create Modelfile & save as below 
+## Step 7: check the downloaded model from following location
 
 ```bash
-FROM /Users/mayankchugh/.cache/huggingface/hub/models--TheBloke--WizardLM-7B-uncensored-GGUF/snapshots/db690b5e11897e4bcbfb5193bb24fd531ab5cd2f/WizardLM-7B-uncensored.Q4_K_M.gguf
+cd /Users/mayankchugh/.cache/huggingface/hub/models--sshleifer--distilbart-cnn-12-6/
 ```
-
-## Step 9: Create model
-```bash
-ollama create uncensored_wizard_7b -f ./hugginfaceModelfile
-```
-```bash
-ollama list
-```
-```bash
-ollama run uncensored_wizard_7b
-```
-
 
