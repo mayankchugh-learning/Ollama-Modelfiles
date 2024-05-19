@@ -137,3 +137,5 @@ ollama list
 ```bash
 ollama run uncensored_wizard_7b
 ```
+
+
