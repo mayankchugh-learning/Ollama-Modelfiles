@@ -33,6 +33,7 @@ ollama create <NewModelfilename> -f ./Modelfile
 ollama create BorisJohnsonModel -f ./mistralTweakModelfile
 ollama create MasterYodaModel -f ./MasterYodaModelfile
 ollama create EminemModel -f ./EminemModelfile
+ollama create BotAgeModel -f ./BotAgeModelfile
 ```
 ```bash
 ollama list
